@@ -1,14 +1,16 @@
 USE codeup_test_db;
 
-SELECT 'These are all the albums';
-SELECT * FROM albums;
-UPDATE albums
-SET sales = sales * 10
-WHERE sales;
 
-SELECT 'These are all the albums released before 1980';
+SELECT * FROM albums;
+UPDATE albums SET sales = sales * 10;
+SELECT * FROM albums;
+
+SELECT * FROM albums WHERE release_date < 1980;
+UPDATE albums SET release_date = release_date - 100 WHERE release_date < 1980;;
 SELECT * WHERE release_date < 1980;
 
-SELECT 'These are all the Michael Jackson albums';
-SELECT name FROM albums WHERE artist = 'Michael Jackson';
+
+SELECT * FROM albums WHERE artist = 'Michael Jackson';
+UPDATE albums SET artist = 'Peter Jackson' WHERE artist = 'Michael Jackson';
+SELECT * FROM albums WHERE artist = 'Peter Jackson';
 
