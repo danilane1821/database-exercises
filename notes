@@ -1,0 +1,48 @@
+//how we create a database:
+
+CREAT DATABASE database_name;
+
+//how to open or select database
+
+USE database_name;
+
+//how to create a user
+
+CREATE USER 'bob'@'hostname' IDENTIFIED  BY 'bobPassword';
+
+//how to create a table
+
+CREATE TABLE IF NOT EXISTS table_name
+
+CREATE TABLE table_name(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    field_name_2 (DATA TYPE) NOT NULL,
+    ....
+    PRIMARY KEY(id)
+  );
+
+  // how to show, describe, or drop tables
+
+  SHOW TABLES;
+
+  DESCRIBE table_name;
+
+  SHOW CREATE TABLE table_name;
+
+  DROP TABLE IF EXISTS table_name;
+
+  DROP TABLE table_name;
+
+  //granting access to users or drop users
+
+  GRANT ALL ON *.* TO 'billy'@'localhost' --> optional [WITH GRANT OPTION]; --> grants all accesses on everything
+
+  GRANT CREATE, ALTER, INSERT, DROP ON office_db.* TO 'bob'@'localhost'; --> grants certain permissions on specific DB but all tables
+
+  GRANT SELECT, INSERT, UPDATE, DELETE ON sally_db.sallys_table TO 'sally'@'localhost';--> grants permissions only on one DB and one Table
+
+  DROP USER 'sally'@'localhost';
+
+  // how to run mysql file internally in terminal
+
+   source name_migration;
