@@ -39,6 +39,6 @@ ORDER BY emp_no DESC;
 SELECT emp_no, first_name, last_name, birth_date, hire_date
 FROM employees
 WHERE hire_date like ('199%')
-  AND birth_date like ('%12-25')
+AND birth_date like ('%12-25')
 ORDER BY birth_date ASC, hire_date DESC;
 
